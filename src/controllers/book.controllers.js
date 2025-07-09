@@ -26,7 +26,6 @@ export async function handleBookUpload(req, res) {
         throw new Error("Unsupported file type.");
     }
 
-    // Clean up uploaded file
     fs.unlink(filePath, (err) => {
       if (err) console.warn("Failed to remove file:", err);
     });

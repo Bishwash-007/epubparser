@@ -5,7 +5,7 @@ import { handleBookUpload } from '../controllers/book.controllers.js';
 
 const router = express.Router();
 const upload = multer({
-  dest: 'uploads/',
+  dest: 'public/uploads/',
   limits: { fileSize: 50 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     const allowedMimes = ['application/epub+zip', 'application/pdf'];
